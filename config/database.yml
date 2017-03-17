@@ -16,10 +16,11 @@
 #
 default: &default
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  timeout: 5000
 
 development:
   <<: *default
@@ -80,6 +81,8 @@ test:
 #
 production:
   <<: *default
-  database: VentySync_production
-  username: VentySync
-  password: <%= ENV['VENTYSYNC_DATABASE_PASSWORD'] %>
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>

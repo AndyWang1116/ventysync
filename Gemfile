@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'figaro'
 gem 'shopify_app'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -46,6 +47,10 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'annotate'
   gem 'better_errors'
+  gem 'capistrano-rvm'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-passenger'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
