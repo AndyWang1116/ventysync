@@ -1,6 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
+`ssh-add`
 set :application, 'ventysync'
 set :repo_url, 'git@github.com:AndyWang1116/ventysync.git'
 set :branch, :master

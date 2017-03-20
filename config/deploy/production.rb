@@ -61,4 +61,7 @@
 #   }
 
 server '54.254.250.138', user: 'deploy', roles: %w{web app db}
-server 'ventysync-production.cwdsgytm199k.ap-southeast-1.rds.amazonaws.com:5432', user: 'ventysync', roles: %w{db}
+
+set :ssh_options, {
+  forward_agent: true
+}
