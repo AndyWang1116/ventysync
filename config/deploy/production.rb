@@ -60,6 +60,8 @@
 #     # password: 'please use keys'
 #   }
 
+set :stage, :production
+
 server '54.254.250.138', user: 'deploy', roles: %w{web app db}
 
 set :ssh_options, {
