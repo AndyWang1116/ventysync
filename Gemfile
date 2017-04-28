@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'figaro'
+gem 'httparty'
 gem 'shopify_app'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
