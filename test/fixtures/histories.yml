@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: histories
+#
+#  id         :integer          not null, primary key
+#  sync_to    :string           not null
+#  setion     :string           not null
+#  action     :string           not null
+#  message    :text             not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sync_to: MyString
+  setion: MyString
+  action: MyString
+  message: MyText
+
+two:
+  sync_to: MyString
+  setion: MyString
+  action: MyString
+  message: MyText
