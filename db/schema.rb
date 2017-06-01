@@ -11,23 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170524103256) do
+ActiveRecord::Schema.define(version: 20170601023409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "hstore"
 
   create_table "histories", force: :cascade do |t|
-    t.string   "sync_to",    null: false
-    t.string   "section",    null: false
-    t.string   "action",     null: false
-    t.hstore   "message",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "sync_to",                 null: false
+    t.string   "section",                 null: false
+    t.string   "action",                  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.jsonb    "message",    default: {}, null: false
   end
 
   add_index "histories", ["action"], name: "index_histories_on_action", using: :btree
-  add_index "histories", ["message"], name: "index_histories_on_message", using: :gin
 
   create_table "shops", force: :cascade do |t|
     t.string   "shopify_domain", null: false
